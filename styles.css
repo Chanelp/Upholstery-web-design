@@ -313,7 +313,7 @@ body {
 .modal__content--slider {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 410px;
   height: 400px;
   transform-style: preserve-3d;
   align-items: center;
