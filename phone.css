@@ -33,6 +33,12 @@
   font-weight: bold;
   color: #5271ff;
 }
+
+.toggle__menu::after {
+  content:"......";
+  color: transparent;
+}
+
 .navbar__menu:hover > ul {
   opacity: 1;
   visibility: visible;
