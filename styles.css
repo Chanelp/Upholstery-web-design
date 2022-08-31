@@ -37,15 +37,25 @@ body {
   grid-area: nav;
   display: flex;
 }
+
+@keyframes ani-nav {
+  0% {
+    transform: translateY(600px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .navbar .navbar__content {
   display: flex;
   align-items: center;
   width: 100%;
   padding: 0 0 0 80px;
-  animation: 2s navbar 0.5s ease-in-out;
+  animation: 3s navbar 0.5s ease-in-out;
 }
 .navbar .navbar__content img {
-  width: 80px;
+  width: 150px;
 }
 .navbar .navbar__content ul {
   display: flex;
@@ -219,18 +229,27 @@ body {
 /* LOADER */
 .loader {
   background: var(--primary-red);
+  background-color: white;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  
   position: absolute;
   z-index: 3;
 
   animation: loader 2s linear forwards;
 }
-.loader div {
-  background: white;
+
+.loader img {
+  width: 300px;
+}
+
+.load div {
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-red);
   border-radius: 50%;
   height: 40px;
   margin: 10px;
