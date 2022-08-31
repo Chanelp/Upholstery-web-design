@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>De Mariano Tapicería</title>
+    <link rel="shortcut icon" href="sofa.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="tablet.css" media="(max-width: 900px)" />
+    <link rel="stylesheet" href="phone.css" media="(max-width: 583px)" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- Main content -->
+      <section class="container">
+        <nav class="navbar">
+          <div class="navbar__content">
+            <img src="sofa.png" alt="Logo" />
+            <div class="navbar__menu">
+              <ul>
+                <li><p>INICIO</p></li>
+                <li><p class="btn_superhero">DISEÑOS</p></li>
+                <li><p class="ac">CONTACTO</p></li>
+              </ul>
+              <a class="toggle__menu">MENÚ </a>
+            </div>
+          </div>
+        </nav>
+
+        <section class="main-content">
+          <p>Obtén tus muebles</p>
+          <h1>Personalizados ya!</h1>
+          <p>
+            Muebles cómodos, elegantes y duraderos a los mejores precios. Obtén muebles nuevos fabricados con los materiales más duraderos y con telas a tu elección.
+          </p>
+        </section>
+
+        <section class="side-content">
+          <div></div>
+          <!-- <p>Tapiza tus muebles</p> -->
+          <img
+            src="https://i.pinimg.com/564x/bb/38/3e/bb383e10be1899307bb4d8b284c7ac8c.jpg"
+            alt="Sofa"
+          />
+          <!-- <img src="https://images.pexels.com/photos/298842/pexels-photo-298842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Superman"> -->
+        </section>
+
+        <!-- FOOTER -->
+
+        <section class="footer">
+          <div class="btn_superhero">
+            <img
+              src="https://i.pinimg.com/564x/6d/10/12/6d1012567c3d9481cc0ce25ea9c74e82.jpg"
+              alt="Producto"
+            />
+          </div>
+          <div class="btn_superhero">
+            <img
+              src="https://regaldekor.com/components/com_jshopping/files/img_products/full_cama_leonor_capitone.jpg"
+              alt="Producto"
+            />
+          </div>
+          <div class="btn_superhero">
+            <img
+              src="https://images.pexels.com/photos/4846097/pexels-photo-4846097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Producto"
+            />
+          </div>
+        </section>
+      </section>
+
+      <!-- Loader -->
+      <section class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+
+      <!-- Modal -->
+      <section class="modal hidden">
+        <div class="modal__content">
+          <img
+            class="modal__content--close"
+            src="https://img.icons8.com/windows/32/000000/macos-close.png"
+            alt="Cerrar"
+          />
+
+          <div class="modal__content--slider">
+            <input
+              type="radio"
+              name="slider-1"
+              id="radio-1"
+              class="hidden"
+              checked
+            />
+            <input
+              type="radio"
+              name="slider-1"
+              id="radio-2"
+              class="hidden"
+              checked
+            />
+            <input
+              type="radio"
+              name="slider-1"
+              id="radio-3"
+              class="hidden"
+              checked
+            />
+
+            <div class="cards">
+              <label for="radio-1" id="card-1" class="card">
+                <img
+                  src="https://i.pinimg.com/236x/75/40/65/7540659ebcaf90ef64b3772b015748ba.jpg"
+                  alt=""
+                />
+              </label>
+              <label for="radio-2" id="card-2" class="card">
+                <img
+                  src="https://m.media-amazon.com/images/I/81KjZ-I9wML._AC_SX466_.jpg"
+                  alt=""
+                />
+              </label>
+              <label for="radio-3" id="card-3" class="card">
+                <img
+                  src="https://i.pinimg.com/564x/e5/b7/15/e5b7159a5616132566fe57fc94ce6062.jpg"
+                  alt=""
+                />
+              </label>
+            </div>
+          </div>
+          <button class="button-red">
+            Adquiere el tuyo <i><img src="http://iconsax.io/icons/a/64.svg" alt="" /></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- CONTACTO MODAL -->
+      <section class="contacto hidden">
+        <div class="modal__contacto">
+          <img
+            class="modal__contacto--close"
+            src="https://img.icons8.com/windows/32/000000/macos-close.png"
+            alt="Cerrar"
+          />
+
+          <ul class="ulc">
+            <li>CONTACTO </li>
+            <li>D' MARIANO TAPICERÍA </li>
+            <li>809-111-2222</li>
+            <li>marianotapiceria@hotmail.com</li>
+          </ul>
+           
+
+          <button class="modal__contact--info">WhatsApp</button>
+        </div>
+      </section>
+    </div>
+  </body>
+
+  <script>
+    const modal = document.querySelector(".modal");
+    const btn_superhero = document.querySelectorAll(".btn_superhero");
+    const close = document.querySelector(".modal__content--close");
+
+    for (let i = 0; i < btn_superhero.length; i++) {
+      btn_superhero[i].addEventListener("click", () => {
+        modal.classList.remove("hidden");
+        modal.classList.add("visible");
+      });
+    }
+
+    close.addEventListener("click", () => {
+      modal.classList.remove("visible");
+      modal.classList.add("hidden");
+    });
+
+    //Script de contacto
+
+    const mcontacto = document.querySelector(".contacto");
+    const acontact = document.querySelector(".ac");
+    const cclose = document.querySelector(".modal__contacto--close");
+
+    acontact.addEventListener("click", () => {
+      mcontacto.classList.remove("hidden");
+      mcontacto.classList.add("visible");
+    });
+
+    cclose.addEventListener("click", () => {
+      mcontacto.classList.remove("visible");
+      mcontacto.classList.add("hidden");
+    });
+  </script>
+</html>
