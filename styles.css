@@ -378,6 +378,10 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+.button-red:hover{
+  background-color: #2c53ff;
+}
+
 .button-red i {
   background-color: white;
 }
