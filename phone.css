@@ -1,7 +1,7 @@
 .navbar__content {
   width: 100%;
   display: flex;
-  justify-content:start;
+  justify-content:space-between;
   padding: 10px 30px;
 }
 .navbar__menu ul {
@@ -25,7 +25,7 @@
 }
 .navbar__menu {
   height: auto;
-  width: 100px;
+  width: 200px;
   text-align: right;
 }
 .toggle__menu {
@@ -68,11 +68,15 @@
 }
 
 .navbar .navbar__content img {
-  order: 1;
+  order: 0;
 }
 
 .footer {
   flex-direction: column;
   height: 90%;
   border-radius: 50px 0 0 50px;
+}
+
+.navbar .navbar__content {
+  padding: 0;
 }
