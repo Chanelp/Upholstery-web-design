@@ -87,3 +87,7 @@
 .navbar .navbar__content {
   padding: 0;
 }
+
+.modal__contacto {
+  width: 95%;
+}
